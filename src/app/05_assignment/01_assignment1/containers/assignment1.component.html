@@ -8,6 +8,19 @@
     <li class="list-group-item">Display the result on the page via string interpolation</li>
   </ul>
   <div class="container your-code">
-    <h6>Remove this &lt;h3&gt; and create your HTML here</h6>
+    <form>
+      <div class="form-group">
+        <div class="badge">Enter some random input</div>
+        <!-- template reference variable -->
+        <input type="text"
+          class="form-control"
+          id="exampleInput"
+          placeholder="Eg-hello world !"
+          #elem
+          (input)="onInput(elem.value)">
+      </div>
+    </form>
+    <hr>
+    <h5> You entered : {{description}} </h5>
   </div>
 </div>

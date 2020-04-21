@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-assignment1',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./assignment1.component.css']
 })
 export class Assignment1Component {
+
+  @Output()
+  inputChanged = new EventEmitter<string>();
+
+  description: string;
+
+
+  onInput(description: string) {
+    this.description = description;
+  }
 
 }
